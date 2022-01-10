@@ -71,7 +71,7 @@ export default function CreateCard({ deckId }) {
           <button
             type="button"
             className="btn btn-secondary m-2"
-            onClick={() => history.push(`/flashcard-app/decks/${deck.id}`)}
+            onClick={() => history.push(`/decks/${deck.id}`)}
           >
             Done
           </button>

@@ -12,7 +12,7 @@ export default function NavBar({ navTitles, id }) {
     }
     return (
       <li key={index} className="breadcrumb-item">
-        <Link to={`/flashcard-app/decks/${id}`}>{title}</Link>
+        <Link to={`/decks/${id}`}>{title}</Link>
       </li>
     );
   });
@@ -21,7 +21,7 @@ export default function NavBar({ navTitles, id }) {
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item">
-          <Link to="/flashcard-app">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         {list}
       </ol>

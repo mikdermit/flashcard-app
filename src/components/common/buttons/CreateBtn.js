@@ -10,7 +10,7 @@ export default function CreateBtn({ deckId, type }) {
         style={{ width: "12rem" }}
         type="button"
       >
-        <Link to="/flashcard-app/decks/new" className="text-white">
+        <Link to="/decks/new" className="text-white">
           Create Deck
         </Link>
       </button>
@@ -21,10 +21,7 @@ export default function CreateBtn({ deckId, type }) {
       style={{ width: "7rem" }}
       type="button"
     >
-      <Link
-        to={`/flashcard-app/decks/${deckId}/cards/new`}
-        className="text-white"
-      >
+      <Link to={`/decks/${deckId}/cards/new`} className="text-white">
         Add Cards
       </Link>
     </button>

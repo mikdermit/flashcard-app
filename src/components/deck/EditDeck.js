@@ -33,9 +33,7 @@ export default function EditDeck({ deckId }) {
   // update deck and navigate to deck page
   const handleSubmit = event => {
     event.preventDefault();
-    updateDeck(formData).then(() =>
-      history.push(`/flashcard-app/decks/${deckId}`)
-    );
+    updateDeck(formData).then(() => history.push(`/decks/${deckId}`));
   };
 
   // only display if there is formData and no error
@@ -73,7 +71,7 @@ export default function EditDeck({ deckId }) {
           <button
             type="button"
             className="btn btn-secondary m-2"
-            onClick={() => history.push("/flashcard-app")}
+            onClick={() => history.push("/")}
           >
             Cancel
           </button>

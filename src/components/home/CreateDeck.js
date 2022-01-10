@@ -16,7 +16,7 @@ export default function CreateDeck() {
     event.preventDefault();
     createDeck(formData)
       .then(updateDeck)
-      .then(newDeck => history.push(`/flashcard-app/decks/${newDeck.id}`))
+      .then(newDeck => history.push(`/decks/${newDeck.id}`))
       .catch(console.error);
   };
 
@@ -52,7 +52,7 @@ export default function CreateDeck() {
           <button
             type="button"
             className="btn btn-secondary m-2"
-            onClick={() => history.push("/flashcard-app")}
+            onClick={() => history.push("/")}
           >
             Cancel
           </button>

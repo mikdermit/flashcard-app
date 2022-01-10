@@ -8,7 +8,7 @@ export default function ViewBtn({ id }) {
       style={{ width: "7rem" }}
       type="button"
     >
-      <Link to={`/flashcard-app/decks/${id}`} className="text-white">
+      <Link to={`/decks/${id}`} className="text-white">
         View
       </Link>
     </button>

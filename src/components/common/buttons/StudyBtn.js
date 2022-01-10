@@ -8,7 +8,7 @@ export default function StudyBtn({ id }) {
       style={{ width: "7rem" }}
       type="button"
     >
-      <Link to={`/flashcard-app/decks/${id}/study`} className="text-white">
+      <Link to={`/decks/${id}/study`} className="text-white">
         Study
       </Link>
     </button>

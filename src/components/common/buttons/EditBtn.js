@@ -9,7 +9,7 @@ export default function EditBtn({ deckId, cardId, type }) {
       style={{ width: "7rem" }}
       type="button"
     >
-      <Link to={`/flashcard-app/decks/${deckId}/edit`} className="text-white">
+      <Link to={`/decks/${deckId}/edit`} className="text-white">
         Edit
       </Link>
     </button>
@@ -19,10 +19,7 @@ export default function EditBtn({ deckId, cardId, type }) {
       style={{ width: "7rem" }}
       type="button"
     >
-      <Link
-        to={`/flashcard-app/decks/${deckId}/cards/${cardId}/edit`}
-        className="text-white"
-      >
+      <Link to={`/decks/${deckId}/cards/${cardId}/edit`} className="text-white">
         Edit
       </Link>
     </button>

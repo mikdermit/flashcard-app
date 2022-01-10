@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app-routes">
       <Switch>
-        <Route path="/flashcard-app">
+        <Route path="/" >
           <Home />
         </Route>
       </Switch>
