@@ -29,7 +29,7 @@ export default function StudyCard({ cards }) {
   const handleReset = () => {
     window.confirm(`Restart cards?\n\nClick "cancel" to return to the homepage`)
       ? setSession(initialState)
-      : history.push("/flashcard-app");
+      : history.push("/");
   };
 
   return (
