@@ -6,5 +6,5 @@ export default function ErrorMessage({ error, children }) {
       <p style={{ color: "red" }}>ERROR: {error.message}</p>
       {children}
     </main>
-  )
+  );
 }

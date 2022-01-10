@@ -11,7 +11,9 @@ export default function DeleteBtn({ id, type }) {
         `Delete this ${type}\n\nYou will not be able to recover it`
       )
     ) {
-      type === "deck" ? deleteDeck(id).then(history.push("/")) : deleteCard(id);
+      type === "deck"
+        ? deleteDeck(id).then(history.push("/flashcard-app"))
+        : deleteCard(id);
     }
     history.go();
   };

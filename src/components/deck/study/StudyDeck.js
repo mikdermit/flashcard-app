@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { readDeck } from "../../../utils/api";
 import ErrorMessage from "../../common/ErrorMessage";
 import LoadingMessage from "../../common/LoadingMessage";
-import LowCards from './LowCards'
+import LowCards from "./LowCards";
 import NavBar from "../../common/NavBar";
 import StudyCard from "./StudyCard";
 

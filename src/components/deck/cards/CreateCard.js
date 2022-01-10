@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { createCard, readDeck } from "../../../utils/api";
 import ErrorMessage from "../../common/ErrorMessage";
-import LoadingMessage from '../../common/LoadingMessage'
+import LoadingMessage from "../../common/LoadingMessage";
 import NavBar from "../../common/NavBar";
 
 export default function CreateCard({ deckId }) {
@@ -37,7 +37,7 @@ export default function CreateCard({ deckId }) {
   // only display if there is formData and no error
   return error ? (
     <ErrorMessage error={error} />
-  ) : !formData|| !deck ? (
+  ) : !formData || !deck ? (
     <LoadingMessage />
   ) : (
     <>
@@ -71,7 +71,7 @@ export default function CreateCard({ deckId }) {
           <button
             type="button"
             className="btn btn-secondary m-2"
-            onClick={() => history.push(`/decks/${deck.id}`)}
+            onClick={() => history.push(`/flashcard-app/decks/${deck.id}`)}
           >
             Done
           </button>

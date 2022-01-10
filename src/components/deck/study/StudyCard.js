@@ -17,21 +17,19 @@ export default function StudyCard({ cards }) {
 
   // when pressed go to next card, if last card then reset
   const handleNext = () => {
-    session.index < cards.length - 1
-      ? setSession({
-          ...session,
-          index: session.index + 1,
-          flipped: false,
-          viewed: false
-        })
-      : resetCards();
+    setSession({
+      ...session,
+      index: session.index + 1,
+      flipped: false,
+      viewed: false
+    });
   };
 
   // confirm user would like to reset or go home
-  const resetCards = () => {
+  const handleReset = () => {
     window.confirm(`Restart cards?\n\nClick "cancel" to return to the homepage`)
       ? setSession(initialState)
-      : history.push("/");
+      : history.push("/flashcard-app");
   };
 
   return (
@@ -50,13 +48,31 @@ export default function StudyCard({ cards }) {
           </div>
           <div className="card-footer">
             <div className="btn-wrapper">
-              <button className="btn btn-secondary mx-1 float-left" style={{width: '5rem'}}onClick={handleFlip}>
+              <button
+                className="btn btn-secondary mx-1 float-left"
+                style={{ width: "5rem" }}
+                onClick={handleFlip}
+              >
                 Flip
               </button>
-              {session.viewed && (
-                <button className="btn btn-primary mx-1 float-right" style={{width: '5rem'}} onClick={handleNext}>
+              {session.viewed && session.index < cards.length - 1 ? (
+                <button
+                  className="btn btn-primary mx-1 float-right"
+                  style={{ width: "5rem" }}
+                  onClick={handleNext}
+                >
                   Next
                 </button>
+              ) : (
+                session.viewed && (
+                  <button
+                    className="btn btn-primary mx-1 float-right"
+                    style={{ width: "5rem" }}
+                    onClick={handleReset}
+                  >
+                    Reset
+                  </button>
+                )
               )}
             </div>
           </div>
