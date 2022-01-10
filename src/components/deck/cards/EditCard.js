@@ -30,7 +30,7 @@ export default function EditCard({ deckId }) {
   const handleSubmit = event => {
     event.preventDefault();
     updateCard(formData).then(() =>
-      history.push(`/flashcard-app/decks/${deckId}`)
+      history.push(`/decks/${deckId}`)
     );
   };
 
@@ -69,7 +69,7 @@ export default function EditCard({ deckId }) {
           <button
             type="button"
             className="btn btn-secondary m-2"
-            onClick={() => history.push("/flashcard-app")}
+            onClick={() => history.push("/")}
           >
             Cancel
           </button>
