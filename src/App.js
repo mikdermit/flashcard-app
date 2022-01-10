@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app-routes">
       <Switch>
-        <Route path="/">
+        <Route path="https://mikdermit.github.io/flashcard-app/">
           <Home />
         </Route>
       </Switch>
