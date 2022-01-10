@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/mikdermit.github.io/flashcard-app/static/js/main.96629f6b.chunk.js",
-    "main.js.map": "/mikdermit.github.io/flashcard-app/static/js/main.96629f6b.chunk.js.map",
-    "runtime-main.js": "/mikdermit.github.io/flashcard-app/static/js/runtime-main.7736bf77.js",
-    "runtime-main.js.map": "/mikdermit.github.io/flashcard-app/static/js/runtime-main.7736bf77.js.map",
-    "static/js/2.541cfc43.chunk.js": "/mikdermit.github.io/flashcard-app/static/js/2.541cfc43.chunk.js",
-    "static/js/2.541cfc43.chunk.js.map": "/mikdermit.github.io/flashcard-app/static/js/2.541cfc43.chunk.js.map",
-    "index.html": "/mikdermit.github.io/flashcard-app/index.html",
-    "static/js/2.541cfc43.chunk.js.LICENSE.txt": "/mikdermit.github.io/flashcard-app/static/js/2.541cfc43.chunk.js.LICENSE.txt"
+    "main.js": "/flashcard-app/static/js/main.27a6e874.chunk.js",
+    "main.js.map": "/flashcard-app/static/js/main.27a6e874.chunk.js.map",
+    "runtime-main.js": "/flashcard-app/static/js/runtime-main.b1eba35c.js",
+    "runtime-main.js.map": "/flashcard-app/static/js/runtime-main.b1eba35c.js.map",
+    "static/js/2.541cfc43.chunk.js": "/flashcard-app/static/js/2.541cfc43.chunk.js",
+    "static/js/2.541cfc43.chunk.js.map": "/flashcard-app/static/js/2.541cfc43.chunk.js.map",
+    "index.html": "/flashcard-app/index.html",
+    "static/js/2.541cfc43.chunk.js.LICENSE.txt": "/flashcard-app/static/js/2.541cfc43.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7736bf77.js",
+    "static/js/runtime-main.b1eba35c.js",
     "static/js/2.541cfc43.chunk.js",
-    "static/js/main.96629f6b.chunk.js"
+    "static/js/main.27a6e874.chunk.js"
   ]
 }
