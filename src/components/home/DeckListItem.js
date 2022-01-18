@@ -16,8 +16,8 @@ export default function DeckListItem({ deck }) {
         </div>
         <div className="card-footer">
           <div className="btn-wrapper">
-            <ViewButton id={deck.id} />
-            <StudyButton id={deck.id} />
+            <ViewButton deckId={deck.id} />
+            <StudyButton deckId={deck.id} />
             <DeleteButton id={deck.id} type="deck" />
           </div>
         </div>

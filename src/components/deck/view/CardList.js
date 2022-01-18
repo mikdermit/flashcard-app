@@ -24,7 +24,7 @@ export default function ViewDeck({ deck, cards }) {
         <div className="card-footer">
           <div className="btn-wrapper text-left">
             <EditButton deckId={deck.id} type="deck" />
-            <StudyButton id={deck.id} />
+            <StudyButton deckId={deck.id} />
             <CreateButton deckId={deck.id} type="card" />
             <DeleteButton id={deck.id} type="deck" />
           </div>

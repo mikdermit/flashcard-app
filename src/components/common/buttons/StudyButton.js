@@ -1,16 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-export default function StudyButton({ id }) {
+export default function StudyButton({ deckId }) {
+  const history = useHistory()
+
   return (
     <button
       className="btn btn-primary mx-1"
       style={{ width: "7rem" }}
       type="button"
+      onClick={() => history.push(`/decks/${deckId}/study`)}
     >
-      <Link to={`/decks/${id}/study`} className="text-white">
-        Study
-      </Link>
+      Study
     </button>
   );
 }

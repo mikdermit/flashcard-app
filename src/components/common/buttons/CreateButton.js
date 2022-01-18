@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function CreateButton({ deckId, type }) {
+  const history = useHistory()
   // if deck then display button for deck, otherwise display button for card
   return type === "deck" ? (
     <div className="text-right">
@@ -9,10 +10,9 @@ export default function CreateButton({ deckId, type }) {
         className="btn btn-secondary"
         style={{ width: "12rem" }}
         type="button"
+        onClick={() => history.push('/decks/new')}
       >
-        <Link to="/decks/new" className="text-white">
-          Create Deck
-        </Link>
+        Create Deck
       </button>
     </div>
   ) : (
@@ -20,10 +20,9 @@ export default function CreateButton({ deckId, type }) {
       className="btn btn-primary mx-1"
       style={{ width: "7rem" }}
       type="button"
+      onClick={() => history.push(`/decks/${deckId}/cards/new`)}
     >
-      <Link to={`/decks/${deckId}/cards/new`} className="text-white">
-        Add Cards
-      </Link>
+      Add Cards
     </button>
   );
 }
