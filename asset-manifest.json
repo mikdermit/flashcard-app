@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/flashcard-app/static/js/main.d33335d8.chunk.js",
-    "main.js.map": "/flashcard-app/static/js/main.d33335d8.chunk.js.map",
+    "main.js": "/flashcard-app/static/js/main.a37e1787.chunk.js",
+    "main.js.map": "/flashcard-app/static/js/main.a37e1787.chunk.js.map",
     "runtime-main.js": "/flashcard-app/static/js/runtime-main.b1eba35c.js",
     "runtime-main.js.map": "/flashcard-app/static/js/runtime-main.b1eba35c.js.map",
-    "static/js/2.8e4a1a9e.chunk.js": "/flashcard-app/static/js/2.8e4a1a9e.chunk.js",
-    "static/js/2.8e4a1a9e.chunk.js.map": "/flashcard-app/static/js/2.8e4a1a9e.chunk.js.map",
+    "static/js/2.b2eda0ee.chunk.js": "/flashcard-app/static/js/2.b2eda0ee.chunk.js",
+    "static/js/2.b2eda0ee.chunk.js.map": "/flashcard-app/static/js/2.b2eda0ee.chunk.js.map",
     "index.html": "/flashcard-app/index.html",
-    "static/js/2.8e4a1a9e.chunk.js.LICENSE.txt": "/flashcard-app/static/js/2.8e4a1a9e.chunk.js.LICENSE.txt"
+    "static/js/2.b2eda0ee.chunk.js.LICENSE.txt": "/flashcard-app/static/js/2.b2eda0ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b1eba35c.js",
-    "static/js/2.8e4a1a9e.chunk.js",
-    "static/js/main.d33335d8.chunk.js"
+    "static/js/2.b2eda0ee.chunk.js",
+    "static/js/main.a37e1787.chunk.js"
   ]
 }
