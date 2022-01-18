@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { deleteDeck, deleteCard } from "../../../utils/api";
 
-export default function DeleteBtn({ id, type }) {
+export default function DeleteButton({ id, type }) {
   const history = useHistory();
 
   const handleDelete = () => {

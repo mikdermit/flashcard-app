@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function CreateBtn({ deckId, type }) {
+export default function CreateButton({ deckId, type }) {
   // if deck then display button for deck, otherwise display button for card
   return type === "deck" ? (
     <div className="text-right">

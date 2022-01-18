@@ -1,12 +1,12 @@
 import React from "react";
-import DeleteBtn from "../common/buttons/DeleteBtn";
-import StudyBtn from "../common/buttons/StudyBtn";
-import ViewBtn from "../common/buttons/ViewBtn";
+import DeleteButton from "../common/buttons/DeleteButton";
+import StudyButton from "../common/buttons/StudyButton";
+import ViewButton from "../common/buttons/ViewButton";
 
 export default function DeckListItem({ deck }) {
   return (
-    <div className="col-6 d-flex align-items-stretch">
-      <div className="card m-2" style={{ width: "33rem" }} key={deck.id}>
+    <div className="col-6 d-flex align-items-stretch" key={deck.id}>
+      <div className="card m-2" style={{ width: "33rem" }}>
         <div className="card-body">
           <h6 className="card-subtitle mb-2 text-muted float-right">
             {deck.cards.length}
@@ -16,9 +16,9 @@ export default function DeckListItem({ deck }) {
         </div>
         <div className="card-footer">
           <div className="btn-wrapper">
-            <ViewBtn id={deck.id} />
-            <StudyBtn id={deck.id} />
-            <DeleteBtn id={deck.id} type="deck" />
+            <ViewButton id={deck.id} />
+            <StudyButton id={deck.id} />
+            <DeleteButton id={deck.id} type="deck" />
           </div>
         </div>
       </div>

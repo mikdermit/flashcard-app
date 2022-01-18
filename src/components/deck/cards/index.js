@@ -1,18 +1,19 @@
 import React from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
-import CreateCard from "./CreateCard";
-import EditCard from "./EditCard";
+import CreateCard from './CreateCard'
+import EditCard from './EditCard'
 import NotFound from "../../common/NotFound";
 
-export default function CardCommands({ deckId }) {
+export default function Cards({ deck, setCards }) {
   const { url } = useRouteMatch();
+
   return (
     <Switch>
       <Route path={`${url}/:cardId/edit`}>
-        <EditCard deckId={deckId} />
+        <EditCard deck={deck} setCards={setCards} />
       </Route>
       <Route path={`${url}/new`}>
-        <CreateCard deckId={deckId} />
+        <CreateCard deck={deck} setCards={setCards} />
       </Route>
       <NotFound />
     </Switch>

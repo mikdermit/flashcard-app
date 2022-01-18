@@ -6,7 +6,7 @@ import DeckList from "./DeckList";
 import Header from "../common/Header";
 import NotFound from "../common/NotFound";
 
-export default function Home() {
+export default function Decks() {
   return (
     <>
       <Header />

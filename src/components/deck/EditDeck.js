@@ -1,29 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { updateDeck, readDeck } from "../../utils/api";
-import ErrorMessage from "../common/ErrorMessage";
-import LoadingMessage from "../common/LoadingMessage";
+import { updateDeck } from "../../utils/api";
 import NavBar from "../common/NavBar";
 
-export default function EditDeck({ deckId }) {
-  const [deck, setDeck] = useState({});
-  const [formData, setFormData] = useState({});
-  const [error, setError] = useState(undefined);
+export default function EditDeck({ deck, setDeck }) {
+  const [formData, setFormData] = useState({ ...deck });
   const history = useHistory();
-
-  // get deck from api and setFormData every time deckId changes
-  useEffect(() => {
-    const controller = new AbortController();
-
-    readDeck(deckId, controller.signal)
-      .then(currentDeck => {
-        setFormData(currentDeck);
-        setDeck(currentDeck);
-      })
-      .catch(setError);
-
-    return () => controller.abort();
-  }, [deckId]);
 
   // update form when changed
   const handleChange = ({ target }) => {
@@ -33,17 +15,15 @@ export default function EditDeck({ deckId }) {
   // update deck and navigate to deck page
   const handleSubmit = event => {
     event.preventDefault();
-    updateDeck(formData).then(() => history.push(`/decks/${deckId}`));
+    updateDeck(formData)
+      .then(setDeck)
+      .then(() => history.push(`/decks/${deck.id}`));
   };
 
-  // only display if there is formData and no error
-  return error ? (
-    <ErrorMessage error={error} />
-  ) : !formData ? (
-    <LoadingMessage />
-  ) : (
+  // display form
+  return (
     <>
-      <NavBar id={deckId} navTitles={[deck.name, "Edit Deck"]} />
+      <NavBar id={deck.id} navTitles={[deck.name, "Edit Deck"]} />
       <div className="container w-75">
         <form onSubmit={handleSubmit}>
           <div className="form-group">

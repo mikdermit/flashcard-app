@@ -1,5 +1,5 @@
 import React from "react";
-import CreateBtn from "../../common/buttons/CreateBtn";
+import CreateButton from "../../common/buttons/CreateButton";
 
 export default function LowCards({ numCards, deckId }) {
   return (
@@ -9,7 +9,7 @@ export default function LowCards({ numCards, deckId }) {
         You need at least 3 cards to study. There are {numCards} cards in this
         deck.
       </p>
-      <CreateBtn deckId={deckId} type="card" />
+      <CreateButton deckId={deckId} type="card" />
     </div>
   );
 }

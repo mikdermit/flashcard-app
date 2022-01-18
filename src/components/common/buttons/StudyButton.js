@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function StudyBtn({ id }) {
+export default function StudyButton({ id }) {
   return (
     <button
       className="btn btn-primary mx-1"

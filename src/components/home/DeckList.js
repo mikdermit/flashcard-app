@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { listDecks } from "../../utils/api";
-import CreateBtn from "../common/buttons/CreateBtn";
+import CreateButton from "../common/buttons/CreateButton";
 import DeckListItem from "./DeckListItem";
 import ErrorMessage from "../common/ErrorMessage";
 import LoadingMessage from "../common/LoadingMessage";
@@ -19,7 +19,7 @@ export default function DeckList() {
   }, []);
 
   // create card for each deck
-  const list = decks.map(deck => <DeckListItem deck={deck} />);
+  const list = decks.map(deck => <DeckListItem key={deck.id} deck={deck} />);
 
   // only display if there are decks and no error
   return error ? (
@@ -28,7 +28,7 @@ export default function DeckList() {
     <LoadingMessage />
   ) : (
     <main>
-      <CreateBtn type="deck" />
+      <CreateButton type="deck" />
       <div className="row">{list}</div>
     </main>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ViewBtn({ id }) {
+export default function ViewButton({ id }) {
   return (
     <button
       className="btn btn-secondary mx-1"
