@@ -4,18 +4,17 @@ import { updateDeck } from "../../utils/api";
 import NavBar from "../common/NavBar";
 
 export default function EditDeck({ deck, setDeck }) {
-  const [formData, setFormData] = useState({ ...deck });
   const history = useHistory();
 
   // update form when changed
   const handleChange = ({ target }) => {
-    setFormData({ ...formData, [target.name]: target.value });
+    setDeck({ ...deck, [target.name]: target.value });
   };
 
   // update deck and navigate to deck page
   const handleSubmit = event => {
     event.preventDefault();
-    updateDeck(formData)
+    updateDeck(deck)
       .then(setDeck)
       .then(() => history.push(`/decks/${deck.id}`));
   };
@@ -34,7 +33,7 @@ export default function EditDeck({ deck, setDeck }) {
               className="form-control"
               name="name"
               onChange={handleChange}
-              value={formData.name}
+              value={deck.name}
             />
           </div>
           <div className="form-group">
@@ -45,7 +44,7 @@ export default function EditDeck({ deck, setDeck }) {
               className="form-control"
               name="description"
               onChange={handleChange}
-              value={formData.description}
+              value={deck.description}
             />
           </div>
           <button

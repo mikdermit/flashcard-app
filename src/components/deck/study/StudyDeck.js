@@ -7,8 +7,7 @@ export default function StudyDeck({ deck, cards }) {
   // if there are less than 3 cards display low cards
   return cards.length < 3 ? (
     <>
-      <h2 className="text-center">Study: {deck.name}</h2>
-      <LowCards numCards={cards.length} deckId={deck.id} />
+      <LowCards numCards={cards.length} deck={deck} />
     </>
   ) : (
     <>

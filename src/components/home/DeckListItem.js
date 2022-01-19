@@ -9,7 +9,7 @@ export default function DeckListItem({ deck }) {
       <div className="card m-2" style={{ width: "33rem" }}>
         <div className="card-body">
           <h6 className="card-subtitle mb-2 text-muted float-right">
-            {deck.cards.length}
+            {deck.cards.length} cards
           </h6>
           <h5 className="card-title">{deck.name}</h5>
           <p className="card-text">{deck.description}</p>
